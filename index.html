@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="text-sm bg-gray-100 text-slate-700 font-Poppins">
+    <div class="p-4">
+
+        <!-- card__container -->
+        <div class="max-w-2xl mx-auto my-5 bg-white shadow-md rounded p-4"  x-data="{tab:'home'}">
+    
+            <!-- profile -->
+            <div class="flex items-start gap-2">
+                <div class="flex items-center gap-8"> 
+                    <img src="./assets/img/landing.jpeg" class="w-20 h-20 rounded-full bg-cover shadow" alt="">
+                    <div class="space-y-3">
+                        <div>
+    
+                            <p>Mugerwa Alphat Obadiah</p>
+                            <p class="font-semibold">Software Developer</p>
+                        </div>
+    
+                        <ul class="flex items-center space-x-2 ">
+                            <li>
+                                <a href="#" class="hover:bg-slate-600 hover:text-white px-3 py-1 transition-all duration-700"  @click="tab='home'" x-bind:class="tab==='home'&&'bg-slate-600 text-white '">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:bg-slate-600 hover:text-white px-3 py-1 transition-all duration-700"  @click="tab='profile'" x-bind:class="tab==='profile'&&'bg-slate-600 text-white '">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:bg-slate-600 hover:text-white px-3 py-1 transition-all duration-700"  @click="tab='setting'" x-bind:class="tab==='setting'&&'bg-slate-600 text-white '">Setting</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+        </div>
+          <!-- content__dynamic -->
+          <div class="p-4">
+           <div x-show="tab ==='home'" x-transition>
+                <h1 class="font-bold">Home</h1>
+                <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur commodi consectetur inventore vel enim earum assumenda facilis accusantium eligendi? Libero atque aliquid ratione?</p>
+           </div>
+           <div x-show="tab ==='profile'" x-transition>
+                <h1 class="font-bold">Profile</h1>
+                <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur commodi consectetur inventore vel enim earum assumenda facilis accusantium eligendi? Libero atque aliquid ratione?</p>
+           </div>
+           <div x-show="tab ==='setting'" x-transition>
+                <h1 class="font-bold">Settings</h1>
+                <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur commodi consectetur inventore vel enim earum assumenda facilis accusantium eligendi? Libero atque aliquid ratione?</p>
+           </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
